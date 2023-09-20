@@ -1,77 +1,68 @@
-Asset Snap Shot
 <script src="Cherry Cloudv1HTML.html" integrity="Cherry Cloudv1HTML.html" crossorigin="anonymous"></script>
-/*WTD = WEEK TO DATE; MTD = MONTH TO DATE; QTD = QUARTER TO DATE; YTD = YEAR TO DATE
-Do I need to curry/compose these functions to have them operate properly?*/
 
 
-var database = [
-	{
-		username: "assetsnapshotdemo",
-		password: "demo123"
-	}
-];
-var newsFeed = [
-	{
-		username: "assetsnapshotdemo",
-		newsfeed: "Welcome!"
-	},
-	{
-		username: "assetsnapshotdemo",
-		newsFeed: "Check out your snap shot and manage your asset with ease!"
-	}
-] 
+const selectElement = document.querySelector('select');
 
-var userNamePrompt = prompt("What's your username?")
-var passwordPrompt = prompt("What's your password?")
+const leasing = document.getElementById('Leasing');
+const renewals = document.getElementById('Renewals');
+const delinquency = document.getElementById('Delinquency');
+const maintenance = document.getElementById('Maintenance');
+const management = document.getElementById('Management');
+const acquisitions = document.getElementById('Acquisitions');
 
-function signIn(username, password) {
-	if (username === database[0], username && 
-		password === database[0], password) {
-			console.log(newsFeed);
-			else{
-				alert("Incorrect username or password");
-			}
-		}
-}
+selectElement.addEventListener('change', function() {
+    const selectedOption = selectElement.value;
 
-var charts = [
-	"Leasing",
-	"Renewals",
-	"Delinquency",
-	"Maintence",
-	"Management",
-	"Aquisitions",
-	/*"Corportate Housing",
-	"Small Business"
-	"Loans/Note Investments"*/
-]
-for (var i = 0; i < charts.length; i++) {
-	console.log(charts[i] + "charts");
-}
+    leasing.style.display = 'none';
+    renewals.style.display = 'none';
+    delinquency.style.display = 'none';
+    maintenance.style.display = 'none';
+    management.style.display = 'none';
+    acquisitions.style.display = 'none';
+
+    if (selectedOption === 'Leasing') {
+        leasing.style.display = 'block';
+    } else if (selectedOption === 'Renewals') {
+        renewals.style.display = 'block';
+    } else if (selectedOption === 'Delinquency') {
+        delinquency.style.display = 'block';
+    } else if (selectedOption === 'Maintenance') {
+        maintenance.style.display = 'block';
+    } else if (selectedOption === 'Management') {
+        management.style.display = 'block';
+    } else if (selectedOption === 'Acquisitions') {
+        acquisitions.style.display = 'block';
+    }
+});
 
 
 
-a:Leasing
+/*Leasing*/
+function collectLeasingData() {
     var newProspectsWTD = prompt("How many new prospects were there this past week?");
     var newProspectsMTD = prompt("How many new prospects were there this past month?");
     var newProspectsQTD = prompt("How many new prospects were there this past quarter?");
-    var newProspectsYTD = prompt("How many new prospects were there this past year?"); 
-    alert(newProspectsWTD, newProspectsMTD, newProspectsQTD, newProspectsYTD);
+    var newProspectsYTD = prompt("How many new prospects were there this past year?");
+    
+    alert("WTD: " + newProspectsWTD + "\nMTD: " + newProspectsMTD + "\nQTD: " + newProspectsQTD + "\nYTD: " + newProspectsYTD);
+    
+    const firstTour = 'First Tour';
+    let closingRatio = 30; 
+    let successfulConversion = true;
 
-	const firstTour = 'First Tour';
-	let closingRatio = 30%;
-	let successfulConversion = true;
-
-	if (closingRatio >= 30%) {
-		let successfulConversion = true;
-		console.log(successfulConversion);
-	}
+    if (closingRatio >= 30) {
+        successfulConversion = true; 
+        console.log(successfulConversion);}
+    
 
     var visitsWTD = prompt("How many visits were there this past week?");
     var visitsMTD = prompt("How many visits were there this past month?");
     var visitsQTD = prompt("How many visits were there this past quarter?");
     var visitsYTD = prompt("How many visits were there this past year?");
-    alert(visitsWTD, visitsMTD, visitsQTD, visitsYTD);
+    
+    alert("WTD: " + visitsWTD + "\nMTD: " + visitsMTD + "\nQTD: " + visitsQTD + "\nYTD: " + visitsYTD);
+
+	if (visits >= )
 
     /*netLeases = Input number that is calculated from Gross applications-leases executed*/
 	var netLeasesWTD = prompt("How many leases were there this past week?");
@@ -132,7 +123,9 @@ a:Leasing
 
 	/*for the next 30 day period how many units are expected to be vacant based on NTV's?*/
     var totalNTVNext30DaysWTD = prompt("For the next 30 day period how many units are expected to be vacant based on NTV's?");
-   
+	}
+	collectLeasingData();
+
 
 b: Renewals
 
