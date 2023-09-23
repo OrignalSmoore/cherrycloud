@@ -127,25 +127,28 @@ function collectLeasingData() {
 	console.log(YouAreAStar);
 	}
 
-	var totalVacant = prompt("What are the total units not currently occupied?");
+	const totalVacant = prompt("What are the total units not currently occupied?");
+	alert("Total Vacant: " + totalVacant);
 
 
-    var downAdmin = prompt("How many units are designated as being used for admin purposes or maintence has determined as unsellable?");
-   
+    const downAdmin = prompt("How many units are designated as being used for admin purposes or maintence has determined as unsellable?");
+	alert("Down Units for Admin: " + downAdmin);
 
-    var totalVacantLeased = prompt("Out of all the vacant units, how many are sold with an executed lease agreement?");
-    
+    const totalVacantLeased = prompt("Out of all the vacant units, how many are sold with an executed lease agreement?");
+    alert("Total Vacant Units Leased: " + totalVacantLeased);
 
-    var totalVacantNotLeasedWTD = prompt("Out of all the vacant units, how many are not sold with an executed lease agreement?");
-    
+    const totalVacantNotLeasedWTD = prompt("Out of all the vacant units, how many are not sold with an executed lease agreement?");
+    alert("Total Vacant Units Not Leased: " + totalVacantLeasedWTD);
 
-    var totalVacantNotLeasedNotReadyWTD = prompt("Out of all the vacant units, how many are not sold & are not 'made ready'?");
-    
-    var totalVacantNotLeasedReadyWTD = prompt("Out of all the vacant units, how many are sold & are not 'made ready'?");
-   
+    const totalVacantNotLeasedNotReadyWTD = prompt("Out of all the vacant units, how many are not sold & are not 'made ready'?");
+    alert("Total Vacant Units Not Leased & Are Not Ready: " + totalVacantNotLeasedNotReadyWTD);
 
-    var totalNTVNext30DaysWTD = prompt("For the next 30 day period how many units are expected to be vacant based on NTV's?");
-	
+    const totalVacantNotLeasedReadyWTD = prompt("Out of all the vacant units, how many are sold & are not 'made ready'?");
+	alert("Total Vacant Units Not Leased & Are Ready: " + totalVacantNotLeasedReadyWTD);
+
+    const totalNTVNext30Days = prompt("For the next 30 day period how many units are expected to be vacant based on NTV's?");
+	alert("Total NTV's coming due for the next 30 days: " + totalNTVNext30Days);
+
 	collectLeasingData();
 
 
@@ -184,10 +187,27 @@ c: Delinquency
 	}
 
 	var totalResidentsDelinquent ($1,000 +) 60 days = prompt("How many residents are deliquent in the past 60days with a balance of $1,000 or greater?");
+	if (totalResidentsDelinquent === $1000 + '60 days' || "Balance owed") {
+		alert("submit intent to file");
+	} else if (totalResidentsDelinquent === $1000 && "intent has been filed") {
+		alert("follow up on status for evicition date");
+	} else (!( totalResidentsDelinquent === $1000)){
+		alert("confirm evicition with local authority");
+	}
 
 	var totalResidentsDelinquent ($1,000 +) 90 days = prompt("How many residents are deliquent in the past 90days with a balance of $1,000 or greater?");
+	if (totalResidentsDelinquent === $1000 + '90 days' || "Balance owed") {
+		alert("submit intent to file");
+	} else if (totalResidentsDelinquent === $1000 && "evicition has been scheduled") {
+		alert("confirm evicition with local authority");
+	} else (!( totalResidentsDelinquent === $1000)){
+		alert("check on recent balance for any additional payments made after the fact prior to evicition date & time");
+	}
 
-	var statusOnResidents in 90+ Column = prompt("Residents that have been deliquent for 90 days or more have been evicted or carry a balance?");
+	var statusOnResidentsIn90Column = prompt("Residents that have been deliquent for 90 days or carry a balance?");
+	if (statusOnResidentsIn90Column === 'balance owed' && 'have not been evicited') {
+		alert("request summary judgement");
+	}	else ("file for eviction")
 
 	var oweAtLeast ($500 +) in 90+ Column = prompt("How many of the residents that have had a balance for 90days or more have a balance of $500 plus?");
 	if (oweAtLeast =< $500){
@@ -202,29 +222,41 @@ d: Maintence
     var openFromPriorPeriodWTD = prompt("How many maintenance tickets are still open from prior week?");
     var openFromPriorPeriodMTD = prompt("How many maintenance tickets are still open from prior month?");
     var openFromPriorPeriodOverdue = prompt("How many maintenance tickets are still open for month than a month?");
-    
-	alert("WTD: " + openFromPriorPeriodWTD + "\nMTD: " + openFromPriorPeriodMTD + "\nOverdue: " + openFromPriorPeriodOverdue);
+    alert("WTD: " + openFromPriorPeriodWTD + "\nMTD: " + openFromPriorPeriodMTD + "\nOverdue: " + openFromPriorPeriodOverdue);
+	if (openFromPriorPeriod <= 10) {
+		openFromPriorPeriod = true;
+		console.log(OnTrack);
+	}
 
 
 	var requestsRecievedWTD = prompt("How many maintenance requests have been recieved this past week?");
     var requestsRecievedMTD = prompt("How many maintenance requests have been recieved this past month?");
     var requestsRecievedQTD = prompt("How many maintenance requests have been received this past quarter?");
     var requestsRecievedYTD = prompt("How many maintenance requests have been recieved this past year?");
-    
-	alert("WTD: " + requestsRecievedWTD + "\nMTD: " + requestsRecievedMTD + "\nQTD: " requestsRecievedQTD + "\nYTD: " requestsRecievedYTD);
+    alert("WTD: " + requestsRecievedWTD + "\nMTD: " + requestsRecievedMTD + "\nQTD: " requestsRecievedQTD + "\nYTD: " requestsRecievedYTD);
+	if (requestsRecieved <= 10) {
+		requestRecieved = true;
+		console.log(OnTrack);
+	}
 
 	var requestsCompletedWTD = prompt("How many maintenance requests have been completed this past week?");
     var requestsCompletedMTD = prompt("How many maintenance requests have been completed this past month?");
     var requestsCompletedQTD = prompt("How many maintenance requests have been completed this past quarter?");
     var requestsCompletedYTD = prompt("How many maintenance requests have been completed this past year?");
-    
-	alert("WTD: " + requestsCompletedWTD + "\nMTD: " requestsCompletedMTD + "\nQTD: " + requestsCompletedQTD + "\nYTD: " requestsCompletedYTD);
+    alert("WTD: " + requestsCompletedWTD + "\nMTD: " requestsCompletedMTD + "\nQTD: " + requestsCompletedQTD + "\nYTD: " requestsCompletedYTD);
+	if (requestsCompleted >= requestsRecieved) {
+		requestsCompleted = true;
+		console.log(OnTrack)
+	}
 
 	var requestsOpenAtEndOfPeriodWTD = prompt("How many requests recieved are still open at the end of the week?");
     var requestsOpenAtEndOfPeriodMTD = prompt("How many requests recieved are still open at the end of the month?");
-    var requestsOpenAtEndOfPeriodOverdue = prompt("How many requests recieved are still open that are now overdue?");
-    
+    var requestsOpenAtEndOfPeriodOverdue = prompt("How many requests recieved are still open that are now overdue?");	    
 	alert("WTD: " + requestsOpenAtEndOfPeriodWTD + "MTD: " + requestsOpenAtEndOfPeriodMTD + "\nOverdue: " requestsOpenAtEndOfPeriodOverdue);
+	if (requestsOpenAtEndOfPeriod >= requestsRecieved) {
+		requestsOpenAtEndOfPeriod = true;
+		console.log(evaluateProblem);
+	}
 
 
 e: Management

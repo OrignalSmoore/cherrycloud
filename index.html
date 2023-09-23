@@ -1,0 +1,340 @@
+<!--google sheet api build in for snap
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Cherry Cloud</title>
+      <link rel="stylesheet" type="text/css" href="CherryCloudv1CSS.css">
+    </head>
+      <img src="C:\Users\Sean-Patrick\Downloads\Untitled design (3).png" width="100" height="100">
+  <body>
+    <div class="login">
+      <a href="CherryCloudWelcomePagev1HTML.html">
+      <input type="submit" value="Login">
+      </a>
+      <input type="submit" value="Sign Up">
+    </div>
+    <h2>Cherry Cloud BETA</h2>
+
+        <p><strong>Cherry Cloud - Draw Quick Assesments From Readily Accessible Data</strong></p>
+        <br>
+        <p><strong>"Currently we are focused on transforming insight &amp; decision making for real estate asset's and businesses"</strong></p>
+        <br>
+        <br>
+        <br>
+    <h3>Cherry Cloud</h3><a href="index.html"></a>
+        <ul>
+           <li><strong>Leasing</strong></li><br>
+           <li><strong>Renewals</strong></li><br>
+           <li><strong>Delinquency</strong></li><br>
+           <li><strong>Maintence</strong></li><br>
+           <li><strong>Management</strong></li><br>
+           <li><strong>Aquisitions</strong></li><br>
+           <li><strong>Corporate Leasing, Small Businesses and Loans/Note Investing...Coming soon!</strong></li>
+        </ul>
+    <p><strong>SNAP SHOT SELECTOR (ctrl/cmd select for multiple)</strong>
+        <select multiple size="6">
+            <option value="Leasing">Leasing</option>
+            <option value="Renewals">Renewals</option>
+            <option value="Delinquency">Delinquency</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Management">Management</option>
+            <option value="Aquisitions">Aquisitions</option>
+        </select>
+    </p>
+      <br>
+<div class="container">
+    <div class="Leasing" id="Leasing"><h3>Leasing</h3>
+        <form>
+         New prospects:<input type="text" required="">
+        </form>
+         <form>
+         Visits:<input type="text">
+        </form>
+        <form>
+         Leases (Net Leases):<input type="text">
+        </form>
+        <form>
+         Closing Ratio:<input type="text">
+        </form>
+        <form>
+         Leased(%):<input type="text">
+        </form>
+        <form>
+         Occupancy(%):<input type="text">
+        </form>
+        <form>
+         Google Score(Rating):<input type="text">
+        </form>
+        <form>
+         Total Vacant:<input type="text">
+        </form>
+        <form>
+         Down/Admin:<input type="text">
+        </form>
+        <form>
+         Total Vacant Leased:<input type="text">
+        </form>
+        <form>
+         Total Vacant Not Leased:<input type="text">
+        </form>
+        <form>
+         Total Vacant Not Leased Not Ready:<input type="text">
+        </form>
+        <form>
+         Total Vacant Not Leased Ready:<input type="text">
+        </form>
+        <form>
+         Total NTV(notice to vacate) next 30 days:<input type="text">
+        </form>
+        <input type="submit" value="SNAP">
+        <p>BETA DOC DROPBOX</p>
+    </div>
+<br>
+    <div class="Renewals" id="Renewals"><h3>Renewals</h3>
+    <form>
+      Total Leases Expiring:<input type="text">
+    </form>
+    <form>
+     Leases Expiring Renewed:<input type="text">
+    </form>
+    <form>
+      Leases Expiring Will Renew:<input type="text">
+    </form>
+    <form>
+      Leases Expiring NTV:<input type="text">
+    </form>
+    <form>
+     Leases Expiring Going MTM:<input type="text">
+    </form>
+    <form>
+      Leases Expiring No Response:<input type="text">
+      <input type="radio" name="follow-up">Have completed multiple follow-ups<br>
+    </form>
+    <form>
+     Total MTM(month to month):<input type="text">
+    </form>
+    <form>
+      MTM Due to Eviction Proceeding:<input type="text">
+    </form>
+    <form>
+      Will Stay MTM:<input type="text">
+    </form>
+    <form>
+      NTV: <input type="text">
+    </form>
+    <form>
+      Will Renew:<input type="text">
+    </form>
+    <input type="submit" value="SNAP">
+    <p>BETA DOC DROPBOX</p>
+    </div>
+<br>
+    <div class="Delinquency" id="Delinquency"><h3>Delinquency</h3>
+    <form>
+     Total Residents Delinquent ($1,000 +) 30 days:<input type="text">
+     <input type="checkbox" name="More than 5 Residents">Less than 10 Residents
+     <input type="checkbox" name="More than 10 Residents">More than 10 Residents<br>
+    </form>
+    <form>
+     Total Residents Delinquent ($1,000 +) 60 days:<input type="text">
+    </form>
+    <form>
+      Total Residents Delinquent ($1,000 +) 90 days:<input type="text">
+    </form>
+    <form>
+      Status on Residents in 90+ Column:<input type="text">
+    </form>
+    <form>
+     Owe at Least ($500 +) in 90+ Column:<input type="text">
+    </form>
+    <input type="submit" value="SNAP">
+    <p>BETA DOC DROPBOX</p>
+  </div>
+<br>
+    <div class="Maintenance" id="Maintenance"><h3>Maintenance</h3>
+    <form>
+      Open From Prior Period:<input type="text">
+    </form>
+    <form>
+      Requests Recieved:<input type="text">
+    </form>
+    <form>
+     Requests Completed:<input type="text">
+    </form>
+    <form>
+     Requests Open at End of Period:<input type="text">
+    </form>
+    <input type="submit" value="SNAP">
+    <p>BETA DOC DROPBOX</p>
+  </div>
+  <br>
+    <div class="Management" id="Management"><h3>Management</h3>
+    <form>
+      Accural Accounting(All income - all expenses):<input type="text">
+    </form>
+    <form>
+      Amount of Rent Increase(Average Effective Rent for Renewal - Average Effective Rent on Previous Lease):<input type="text">
+    </form>
+    <form>
+      Annualization(Average of actual months of expenses (or income) / number of months reported x 12):<input type="text">
+    </form>
+    <form>
+      Average Effective Rent(Total Rent Revenue / Units Occupied):<input type="text">
+    </form>
+    <form>
+      Bad Debt(Total Uncollected rent income due to non-payment):<input type="text">
+    </form>
+    <form>
+      Break Even Occupany Ratio (Operating Expense + Debt Service + Replacement Reserve):<input type="text">
+    </form>
+    <form>
+      Breakeven Rent Per Square Foot((Operating Expenses + Debt Service + Replacement Reserve)/ Total Property Square Feet):<input type="text">
+    </form>
+    <form>
+      Capital Expense(Large Improvements):<input type="text">
+    </form>
+    <form>
+      Capitalization Rate or Cap Rate (Net Operting Income / Purchase Price):<input type="text">
+    </form>
+    <form>
+      Cash Flow (Net Operating Income - Debt Service - Capital Expense - Replacement Reserve):<input type="text">
+    </form>
+    <form>
+      Cash on Cash Return (Cash Flow / Down Payment (or initial Equity)):<input type="text">
+    </form>
+    <form>
+      Debt Service(Loan/Mortgage payment):<input type="text">
+    </form>
+    <form>
+      Effective Gross Income(Gross Potential Rent - Vacancy = Total Rent Revenue + Operating Income):<input type="text">
+    </form>
+    <form>
+      Effective Market Rent ((Monthly Market Rent x # of months in lease - total concessions)/ # of months in lease):<input type="text">
+    </form>
+    <form>
+      Gross Potential Income(Occupied Units x Average Leased Rent + Vacant Units x Average Market Rent):<input type="text">
+    </form>
+    <form>
+      Gross Potential Rent (Total Units x Average Market Rent):<input type="text">
+    </form>
+    <form>
+      Leased Percentage (Leased Units / Total Units):<input type="text">
+    </form>
+    <form>
+      Leased Units (Total Units - Vacant Units - Notices to Vacate + Vacant Units Leased + Notices to Vacate Preleased):<input type="text">
+    </form>
+    <form>
+      Net Operating Income (Effective Gross Income - Operating Expenses):<input type="text">
+    </form>
+    <form>
+      Operating Expense Ratio (Operating Expense / Effective Gross Income):<input type="text">
+    </form>
+    <form>
+      Percent Renewal Increase (Amount of Increase / Previous Lease Rent):<input type="text">
+    </form>
+    <form>
+      Replacement Reserve (amount set asided for future expenses and projects):<input type="text">
+    </form>
+    <form>
+      Return on Investment (Return / Investment):<input type="text">
+    </form>
+    <form>
+      Total Rent Revenue (Gross Potential Rent - Vacancy):<input type="text">
+    </form>
+    <form>
+     Turnover Ratio (Total Number of Move Outs / Total Number of Units) :<input type="text">
+    </form>
+    <form>
+      Vacancy/Collection Loss (Vacancy, Collection Loss, Non Revenue Units, and Concessions):<input type="text">
+    </form>
+    <input type="submit" value="SNAP">
+    <p>BETA DOC DROPBOX</p>
+  </div>
+  <br>
+  <div class="Aquisitions" id="Aquisitions"><h3>Aquisitions</h3>
+    <form>
+     Interest for loan (Interest= Principal x Rate x Time) :<input type="text">
+    </form>
+     <form>
+       Principal on loan ([Principal = Interest ÷ (% Rate x Time)]):<input type="text">
+      </form>
+       <form>
+       Rate on loan ([Rate = Interest ÷ (Principal x Time)]):<input type="text">
+      </form>
+      <form>
+         Net Operating Income (NOI = Property Value x Cap Rate):<input type="text">
+      </form>
+      <form>
+        Property Value (Property Value = NOI ÷ Cap Rate):<input type="text">
+      </form>
+      <form>
+         Cap Rate (Cap Rate = NOI ÷ Property Value):<input type="text">
+      </form>
+      <form>
+        Income(Income = Amount Paid x Rate of Return):<input type="text">
+      </form>
+      <form>
+        Amount Paid (Amount Paid = Income ÷ Rate of Return):<input type="text">
+      </form>
+        <form>
+        Rate of Return (Rate of Return = Income ÷ Amount Paid):<input type="text">
+      </form>
+      <form>
+        Increase in Value (Increase = Purchase Price x Rate of Return):<input type="text">
+      </form>
+      <form>
+       Purchase Price (Purchase Price = Increase ÷ Rate of Return):<input type="text">
+       </form>
+        <form>
+        Rate of Return (Rate = Increase ÷ Purchase Price):<input type="text">
+        </form>
+        <form>
+        Loan-to-Value (LTV= Loan Amount / Sales price or appraised value (whichever is less)):<input type="text">
+        </form>
+        <form>
+       Loan Amount (Sales Price or appraised value(whichever is less)x Loan-to-Value(LTV)):<input type="text">
+        </form>
+        <form>
+      Sales Price or Appraised Price(Loan amount / Loan-to-Value(LTV)):<input type="text">
+        </form>
+        <form>
+      Annual Interest(loan amount(Principal) x annual interest rate):<input type="text">
+        </form>
+        <form>
+      Principal Loan Amount (Annual Interest / Annual Interest Rate):<input type="text">
+        </form>
+        <form>
+       Annual Interest Rate (Annual Interest / Loan Amount(principal)):<input type="text">
+       </form>
+        <form>
+      Amount Paid for Points (Loan amount x Points as Percentage of Loan):<input type="text">
+        </form>
+       <form>
+      Loan Amount(Amount Paid for Points / Points as Percentage of Loan):<input type="text">
+       </form>
+        <form>
+      Points as Percentage of Loan (Amount Paid for Points / Loan Amount):<input type="text">
+      </form>
+      <form>
+      Percentage Rent (Gross sales subject to percentage x % in the lease):<input type="text">
+      </form>
+      <form>
+      Gross Sales Subject to the Percentage (Percentage Rent / % in the lease):<input type="text">
+      </form>
+      <form>
+      Percent (%) in the Lease (Percentage Rent / Gross Sales Suject to the Percentage):<input type="text">
+      </form>
+      <input type="submit" value="SNAP">
+      <p>BETA DOC DROPBOX</p>
+  </div>
+</div>
+  <br>
+    <p input type="checkbox" name="Learn More"><strong>Leasing, Small Businesses and Loans/Note Investing....COMING SOON!</strong></p>
+      </div>
+      <footer>
+        <strong>Simplfying Asset Decisions to One Page</strong>
+      </footer>
+      <script src="C:\Users\Sean-Patrick\Desktop\Cherry Cloud\CherryCloudv1JS.js"></script>
+  </body>
+</html>

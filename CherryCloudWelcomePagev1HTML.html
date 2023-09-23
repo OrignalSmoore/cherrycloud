@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" type="text/css" href="CherryCloudWelcomePagev1CSS.css">
+        <title>Granular Bar</title>
+        <style>
+            .sidebar {
+                height: 100%;
+                width: 150px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #727070;
+                padding-top: 20px;
+            }
+    
+            .sidebar a {
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: 18px;
+                color: #ae0f0f;
+                display: block;
+            }
+    
+            .sidebar a:hover {
+                background-color: lightgray;
+            }
+    
+            .content {
+                margin-left: 150px; 
+                padding: 20px;
+            }
+        </style>
+        <h1 class="welcome">Welcome to your Cherry Cloud Account</h1>
     </head>
-    <body>
-        
+<body>
+    <div class="sidebar">
+        <a href="#">Home</a>
+        <a href="#">Leasing</a>
+        <a href="#">Delinquency</a>
+        <a href="#">Maintenance</a>
+        <a href="#">Management</a>
+        <a href="#">Acquisitions</a>
+    </div>
+
+    <div class="content">
+           <p>Cherry Cloud Dashboard</p>
+    </div>
     </body>
 </html>
