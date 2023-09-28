@@ -152,7 +152,7 @@ function collectLeasingData() {
 	collectLeasingData();
 
 
-b: Renewals
+/*Renewals*/
 
     var totalLeasesExpiring = prompt("What are the total number of leases expiring?");
 
@@ -176,7 +176,7 @@ b: Renewals
 
 	var willRenew = prompt("How many units will renew? Units that have given intention to renew but now executed lease");
 
-c: Delinquency
+/*Delinquency*/
     var totalResidentsDelinquent ($1,000 +) 30 days = prompt("How many residents are deliquent in the past 30days with a balance of $1,000 or greater?");
 	if (totalResidentsDelinquent === $1000 + '30 days' || "Balance owed") {
 		alert("submit intent to file");
@@ -218,7 +218,7 @@ c: Delinquency
 		alert("no balance carried");
 	}
 
-d: Maintence
+/*Maintence*/
     var openFromPriorPeriodWTD = prompt("How many maintenance tickets are still open from prior week?");
     var openFromPriorPeriodMTD = prompt("How many maintenance tickets are still open from prior month?");
     var openFromPriorPeriodOverdue = prompt("How many maintenance tickets are still open for month than a month?");
@@ -259,104 +259,161 @@ d: Maintence
 	}
 
 
-e: Management
-    const accuralAccounting(All income - all expenses);
+/*Management*/
+    /*const accuralAccounting(All income - all expenses);*/
+	let allIncome = allIncome;
+	let allExpenses = allExpenses;
+	let accuralAccounting = allIncome - allExpenses;
+	console.log(accuralAccounting);
 
-	const amountOfRentIncrease(Average Effective Rent for Renewal - Average Effective Rent on Previous Lease);
+	/*const amountOfRentIncrease(Average Effective Rent for Renewal - Average Effective Rent on Previous Lease);*/
+	let averageEffectiveRentForRenewal = averageEffectiveRentForRenewal;
+	let averageEffectiveRentOnPreviousLease = averageEffectiveRentOnPreviousLease;
+	let amountOfRentIncrease = averageEffectiveRentForRenewal - averageEffectiveRentOnPreviousLease;
+	console.log(amountOfRentIncrease);
 
-	const Annualization(Average of actual months of expenses (or income) / number of months reported x 12);
+	/*const Annualization(Average of actual months of expenses (or income) / number of months reported x 12);*/
+	let averageOfActualMonthsExpenses = averageOfActualMonthsExpenses;
+	let numberOfMonthsReported = numberOfMonthsReported;
+	let year = 12;
+	let annualizationExpenses = averageOfActualMonthsExpenses / (numberOfMonthsReported * year);
+	console.log(annualizationExpenses);
 
-	const average Effective Rent(Total Rent Revenue / Units Occupied);
+	let averageOfActualMonthsIncome = averageOfActualMonthsIncome;
+	let numberOfMonthsReported = numberOfMonthsReported;
+	let year = 12;
+	let annualizationIncome = averageOfActualMonthsIncome / (numberOfMonthsReported * year);
+	console.log(annualizationIncome);
 
-	const badDebt(Total Uncollected rent income due to non-payment);
+	/*const average Effective Rent(Total Rent Revenue / Units Occupied);*/
+	let totalRentRevenue = totalRentRevenue;
+	let unitsOccupied = unitsOccupied;
+	let averageEffectiveRent = totalRentRevenue / unitsOccupied;
+	console.log(averageEffectiveRent);
 
-	const breakEvenOccupanyRatio (Operating Expense + Debt Service + Replacement Reserve);
+	/*const badDebt(Total Uncollected rent income due to non-payment);*/
+	const badDebt = prompt("What is the total uncollect rent income due to non-payment?");
+	console.log(badDebt);
 
-	const breakevenRentPerSquareFoot((Operating Expenses + Debt Service + Replacement Reserve)/ Total Property Square Feet);
+	/*const breakEvenOccupanyRatio (Operating Expense + Debt Service + Replacement Reserve);*/
+	let operatingExpense = operatingExpense;
+	let debtService = debtService;
+	let replacementReserve = replacementReserve;
+	let breakEvenOccupanyRatio = operatingExpense + debtService + replacementReserve;
+	console.log(breakEvenOccupanyRatio);
 
-	const capitalExpense(Large Improvements);
+	/*const breakevenRentPerSquareFoot((Operating Expenses + Debt Service + Replacement Reserve)/ Total Property Square Feet);*/
+	let operatingExpense = operatingExpense;
+	let debtService = debtService;
+	let replacementReserve = replacementReserve;
+	let totalPropertySquareFeet = totalPropertySquareFeet;
+	let breakEvenRentPerSquareFoot = (operatingExpense + debtService + replacementReserve) / totalPropertySquareFoot;
+	console.log(breakEvenRentPerSquareFoot);
 
-	const capitalizationRateOrCapRate(Net Operting Income / Purchase Price);
+	/*const capitalExpense(Large Improvements);*/
+	const capitalExpense = prompt("What is the total cost of any large improvements(capital expenses)?");
+	console.log(capitalExpense);
 
-	const cashFlow (Net Operating Income - Debt Service - Capital Expense - Replacement Reserve);
+	/*const capitalizationRateOrCapRate(Net Operting Income / Purchase Price);*/
+	let netOperatingIncome = netOperatingIncome;
+	let purchasePrice = purchasePrice;
+	let capitalizationRateOrCapRate = netOperatingIncome / purchasePrice;
+	console.log(capitalizationRateOrCapRate);
 
-	const cashOnCashReturn (Cash Flow / Down Payment (or initial Equity));
+	/*const cashFlow (Net Operating Income - Debt Service - Capital Expense - Replacement Reserve);*/
+	let netOperatingIncome = netOperatingIncome;
+	let debtService = debtService;
+	let capitalExpense = capitalExpense;
+	let replacementReserve = replacementReserve;
+	let cashFlow = netOperatingIncome - debtService - capitalExpense - replacementReserve;
+	console.log(cashFlow);
 
-	const debtService(Loan/Mortgage payment);
+	/*const cashOnCashReturn (Cash Flow / Down Payment (or initial Equity));*/
+	let cashFlow = cashFlow;
+	let downPayment = downPayment;
+	let cashOnCashReturn = cashFlow / downPayment;
+	console.log(cashOnCashReturn);
 
-	const effectiveGrossIncome(Gross Potential Rent - Vacancy = Total Rent Revenue + Operating Income);
+	/*const debtService(Loan/Mortgage payment);*/
+	let loan = loan;
+	let mortgagePayment = mortgagePayment;
+	let debtService = loan / mortgagePayment;
+	console.log(debtService);
 
-	const effectiveMarketRent ((Monthly Market Rent x # of months in lease - total concessions)/ # of months in lease);
+	/*const effectiveGrossIncome(Gross Potential Rent - Vacancy = Total Rent Revenue + Operating Income);*/
+	
 
-	const grossPotentialIncome(Occupied Units x Average Leased Rent + Vacant Units x Average Market Rent);
+	/*const effectiveMarketRent ((Monthly Market Rent x # of months in lease - total concessions)/ # of months in lease);*/
 
-	const grossPotentialRent (Total Units x Average Market Rent);
+	/*const grossPotentialIncome(Occupied Units x Average Leased Rent + Vacant Units x Average Market Rent);*/
 
-	const leasedPercentage (Leased Units / Total Units);
+	/*const grossPotentialRent (Total Units x Average Market Rent);*/
 
-	const leasedUnits (Total Units - Vacant Units - Notices to Vacate + Vacant Units Leased + Notices to Vacate Preleased);
+	/*const leasedPercentage (Leased Units / Total Units);*/
 
-	const netOperatingIncome (Effective Gross Income - Operating Expenses);
+	/*const leasedUnits (Total Units - Vacant Units - Notices to Vacate + Vacant Units Leased + Notices to Vacate Preleased);*/
 
-	const operatingExpenseRatio (Operating Expense / Effective Gross Income);
+	/*const netOperatingIncome (Effective Gross Income - Operating Expenses);*/
 
-	const percentRenewalIncrease (Amount of Increase / Previous Lease Rent);
+	/*const operatingExpenseRatio (Operating Expense / Effective Gross Income);*/
 
-	const replacementReserve (amount set asided for future expenses and projects);
+	/*const percentRenewalIncrease (Amount of Increase / Previous Lease Rent);*/
 
-	const returnOnInvestment (Return / Investment);
+	/*const replacementReserve (amount set asided for future expenses and projects);*/
 
-	const totalRentRevenue (Gross Potential Rent - Vacancy);
+	/*const returnOnInvestment (Return / Investment);*/
 
-	const turnoverRatio (Total Number of Move Outs / Total Number of Units);
+	/*const totalRentRevenue (Gross Potential Rent - Vacancy);*/
 
-	const vacancy/collectionLoss (Vacancy, Collection Loss, Non Revenue Units, and Concessions);
+	/*const turnoverRatio (Total Number of Move Outs / Total Number of Units);*/
 
-f: Aquisitions
-    const interestForLoan (Interest= Principal x Rate x Time);
+	/*const vacancy/collectionLoss (Vacancy, Collection Loss, Non Revenue Units, and Concessions);*/
 
-	const principalOnLoan ([Principal = Interest ÷ (% Rate x Time)]);
+/*Aquisitions*/
+    /*const interestForLoan (Interest= Principal x Rate x Time);*/
 
-	const rateOnLoan ([Rate = Interest ÷ (Principal x Time)]);
+	/*const principalOnLoan ([Principal = Interest ÷ (% Rate x Time)]);*/
 
-	const netOperatingIncome (NOI = Property Value x Cap Rate);
+	/*const rateOnLoan ([Rate = Interest ÷ (Principal x Time)]);*/
 
-	const propertyValue (Property Value = NOI ÷ Cap Rate);
+	/*const netOperatingIncome (NOI = Property Value x Cap Rate);*/
 
-	const capRate (Cap Rate = NOI ÷ Property Value);
+	/*const propertyValue (Property Value = NOI ÷ Cap Rate);*/
 
-	const income(Income = Amount Paid x Rate of Return);
+	/*const capRate (Cap Rate = NOI ÷ Property Value);*/
 
-	const amountPaid (Amount Paid = Income ÷ Rate of Return);
+	/*const income(Income = Amount Paid x Rate of Return);*/
 
-	const rateOfReturn (Rate of Return = Income ÷ Amount Paid);
+	/*const amountPaid (Amount Paid = Income ÷ Rate of Return);*/
 
-	const increaseInValue (Increase = Purchase Price x Rate of Return);
+	/*const rateOfReturn (Rate of Return = Income ÷ Amount Paid);*/
 
-	const purchasePrice (Purchase Price = Increase ÷ Rate of Return);
+	/*const increaseInValue (Increase = Purchase Price x Rate of Return);*/
 
-	const rateOfReturn (Rate = Increase ÷ Purchase Price);
+	/*const purchasePrice (Purchase Price = Increase ÷ Rate of Return);*/
 
-	const loanToValue (LTV= Loan Amount / Sales price or appraised value (whichever is less));
+	/*const rateOfReturn (Rate = Increase ÷ Purchase Price);*/
 
-	const loanAmount (Sales Price or appraised value(whichever is less)x Loan-to-Value(LTV));
+	/*const loanToValue (LTV= Loan Amount / Sales price or appraised value (whichever is less));*/
 
-	const salesPriceOrAppraisedPrice(Loan amount / Loan-to-Value(LTV));
+	/*const loanAmount (Sales Price or appraised value(whichever is less)x Loan-to-Value(LTV));*/
 
-	const annualInterest(loan amount(Principal) x annual interest rate);
+	/*const salesPriceOrAppraisedPrice(Loan amount / Loan-to-Value(LTV));*/
 
-	const principalLoanAmount (Annual Interest / Annual Interest Rate);
+	/*const annualInterest(loan amount(Principal) x annual interest rate);*/
 
-	const annualInterestRate (Annual Interest / Loan Amount(principal));
+	/*const principalLoanAmount (Annual Interest / Annual Interest Rate);*/
 
-	const amountPaidForPoints (Loan amount x Points as Percentage of Loan);
+	/*const annualInterestRate (Annual Interest / Loan Amount(principal));*/
 
-	const loanAmount(Amount Paid for Points / Points as Percentage of Loan);
+	/*const amountPaidForPoints (Loan amount x Points as Percentage of Loan);*/
 
-	const pointsAsPercentageOfLoan (Amount Paid for Points / Loan Amount);
+	/*const loanAmount(Amount Paid for Points / Points as Percentage of Loan);*/
 
-	const percentageRent (Gross sales subject to percentage x % in the lease);
+	/*const pointsAsPercentageOfLoan (Amount Paid for Points / Loan Amount);*/
 
-	const grossSalesSubjectToThePercentage (Percentage Rent / % in the lease);
+	/*const percentageRent (Gross sales subject to percentage x % in the lease);*/
 
-	const percentInTheLease (Percentage Rent / Gross Sales Suject to the Percentage);
+	/*const grossSalesSubjectToThePercentage (Percentage Rent / % in the lease);*/
+
+	/*const percentInTheLease (Percentage Rent / Gross Sales Suject to the Percentage);*/
