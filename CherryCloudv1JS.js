@@ -1,4 +1,3 @@
-<script src="Cherry Cloudv1HTML.html" integrity="Cherry Cloudv1HTML.html" crossorigin="anonymous"></script>
 
 var database = [
 	{
@@ -58,7 +57,9 @@ selectElement.addEventListener('change', function() {
 
 
 /*Leasing*/
-function collectLeasingData() {
+var button = document.getElementById("leasingsnap")
+var form = document.getElementByFormName("New Prospects")[0]
+button.addEventListener(function collectLeasingData() {
     var newProspectsWTD = prompt("How many new prospects were there this past week?");
     var newProspectsMTD = prompt("How many new prospects were there this past month?");
     var newProspectsQTD = prompt("How many new prospects were there this past quarter?");
@@ -72,7 +73,7 @@ function collectLeasingData() {
 
     if (closingRatio >= 30) {
         successfulConversion = true; 
-        console.log(successfulConversion);}
+        console.log(successfulConversion);})
     
 
     var visitsWTD = prompt("How many visits were there this past week?");
@@ -173,6 +174,7 @@ function collectLeasingData() {
 
 
 /*Renewals*/
+var button = document.getElementById("renewalssnap");
 
     var totalLeasesExpiring = prompt("What are the total number of leases expiring?");
 
@@ -197,6 +199,8 @@ function collectLeasingData() {
 	var willRenew = prompt("How many units will renew? Units that have given intention to renew but now executed lease");
 
 /*Delinquency*/
+var button = document.getElementById("delinquencysnap");
+
     var totalResidentsDelinquent ($1,000 +) 30 days = prompt("How many residents are deliquent in the past 30days with a balance of $1,000 or greater?");
 	if (totalResidentsDelinquent === $1000 + '30 days' || "Balance owed") {
 		alert("submit intent to file");
@@ -239,6 +243,8 @@ function collectLeasingData() {
 	}
 
 /*Maintence*/
+var button = document.getElementById("maintencesnap");
+
     var openFromPriorPeriodWTD = prompt("How many maintenance tickets are still open from prior week?");
     var openFromPriorPeriodMTD = prompt("How many maintenance tickets are still open from prior month?");
     var openFromPriorPeriodOverdue = prompt("How many maintenance tickets are still open for month than a month?");
@@ -280,6 +286,8 @@ function collectLeasingData() {
 
 
 /*Management*/
+var button = document.getElementById("managementsnap");
+
     /*const accuralAccounting(All income - all expenses);*/
 	let allIncome = allIncome;
 	let allExpenses = allExpenses;
@@ -448,6 +456,8 @@ function collectLeasingData() {
 	console.log(collectionLoss);
 
 /*Aquisitions*/
+var button = document.getElementById("aquisitionssnap");
+
     /*const interestForLoan (Interest= Principal x Rate x Time);*/
 	let principal = principal;
 	let rate = rate;
