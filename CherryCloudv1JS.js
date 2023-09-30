@@ -1,5 +1,25 @@
 <script src="Cherry Cloudv1HTML.html" integrity="Cherry Cloudv1HTML.html" crossorigin="anonymous"></script>
 
+var database = [
+	{
+		username: "cherryclouddemo",
+		password: "demo123"
+	}
+];
+
+
+var userNamePrompt = prompt("What's your username?")
+var passwordPrompt = prompt("What's your password?")
+
+function signIn(username, password) {
+	if (username === database[0], username && 
+		password === database[0], password) {
+			console.log(logIn);
+			else{
+				alert("Incorrect username or password");
+			}
+		}
+}
 
 const selectElement = document.querySelector('select');
 
