@@ -88,13 +88,13 @@
     <div class="Delinquency" id="Delinquency"><h3>Delinquency</h3>
     <form>
       Total Residents Delinquent ($1,000 +) 30 days:<input type="text"><br>
-      <input type="checkbox" name="More than 5 Residents">Less than 10 Residents
+      <input type="checkbox" name="Less than 5 Residents">Less than 10 Residents
       <input type="checkbox" name="More than 10 Residents">More than 10 Residents<br>
       Total Residents Delinquent ($1,000 +) 60 days:<input type="text"><br>
-      <input type="checkbox" name="More than 5 Residents">Less than 10 Residents
+      <input type="checkbox" name="Less than 5 Residents">Less than 10 Residents
       <input type="checkbox" name="More than 10 Residents">More than 10 Residents<br>
       Total Residents Delinquent ($1,000 +) 90 days:<input type="text"><br>
-      <input type="checkbox" name="More than 5 Residents">Less than 10 Residents
+      <input type="checkbox" name="Less than 5 Residents">Less than 10 Residents
       <input type="checkbox" name="More than 10 Residents">More than 10 Residents<br>
       Status on Residents in 90+ Column:<input type="text"><br>
       Owe at Least ($500 +) in 90+ Column:<input type="text"><br>
@@ -106,8 +106,12 @@
     <div class="Maintenance" id="Maintenance"><h3>Maintenance</h3>
     <form>
       Open From Prior Period:<input type="text"><br>
-      Requests Recieved:<input type="text"><br>
-      Requests Completed:<input type="text"><br>
+      Requests Recieved For Current Period:<input type="text"><br>
+      <input type="checkbox" name="Less than previous period">Less than previous period
+      <input type="checkbox" name="More than previous period">More than previous period<br>
+      Requests Completed For Current Period:<input type="text"><br>
+      <input type="checkbox" name="Less than previous period">Less than previous period
+      <input type="checkbox" name="More than previous period">More than previous period<br>
       Requests Open at End of Period:<input type="text"><br>
     </form>
     <button id="maintenance-snap">SNAP</button>
@@ -116,32 +120,197 @@
   <br>
     <div class="Management" id="Management"><h3>Management</h3>
     <form>
-      Accural Accounting(All income - all expenses):<input type="text"><br>
-      Amount of Rent Increase(Average Effective Rent for Renewal - Average Effective Rent on Previous Lease):<input type="text"><br>
-      Annualization(Average of actual months of expenses (or income) / number of months reported x 12):<input type="text"><br>
-      Average Effective Rent(Total Rent Revenue / Units Occupied):<input type="text"><br>
-      Bad Debt(Total Uncollected rent income due to non-payment):<input type="text"><br>
-      Break Even Occupany Ratio (Operating Expense + Debt Service + Replacement Reserve):<input type="text"><br>
-      Breakeven Rent Per Square Foot((Operating Expenses + Debt Service + Replacement Reserve)/ Total Property Square Feet):<input type="text"><br>
-      Capital Expense(Large Improvements):<input type="text"><br>
-      Capitalization Rate or Cap Rate (Net Operting Income / Purchase Price):<input type="text"><br>
-      Cash Flow (Net Operating Income - Debt Service - Capital Expense - Replacement Reserve):<input type="text"><br>
-      Cash on Cash Return (Cash Flow / Down Payment (or initial Equity)):<input type="text"><br>
-      Debt Service(Loan/Mortgage payment):<input type="text"><br>
-      Effective Gross Income(Gross Potential Rent - Vacancy = Total Rent Revenue + Operating Income):<input type="text"><br>
-      Effective Market Rent ((Monthly Market Rent x # of months in lease - total concessions)/ # of months in lease):<input type="text"><br>
-      Gross Potential Income(Occupied Units x Average Leased Rent + Vacant Units x Average Market Rent):<input type="text"><br>
-      Gross Potential Rent (Total Units x Average Market Rent):<input type="text"><br>
-      Leased Percentage (Leased Units / Total Units):<input type="text"><br>
-      Leased Units (Total Units - Vacant Units - Notices to Vacate + Vacant Units Leased + Notices to Vacate Preleased):<input type="text"><br>
-      Net Operating Income (Effective Gross Income - Operating Expenses):<input type="text"><br>
-      Operating Expense Ratio (Operating Expense / Effective Gross Income):<input type="text"><br>
-      Percent Renewal Increase (Amount of Increase / Previous Lease Rent):<input type="text"><br>
-      Replacement Reserve (amount set asided for future expenses and projects):<input type="text"><br>
-      Return on Investment (Return / Investment):<input type="text"><br>
-      Total Rent Revenue (Gross Potential Rent - Vacancy):<input type="text"><br>
-      Turnover Ratio (Total Number of Move Outs / Total Number of Units) :<input type="text"><br>
-      Vacancy/Collection Loss (Vacancy, Collection Loss, Non Revenue Units, and Concessions):<input type="text"><br>
+      <!-- Accural Accounting(All income - all expenses) -->
+      <div id="accural-accounting">
+        <h4>Accrual Accounting</h4>
+        All income:<input id="all-income" type="text"><br>
+        All expenses: <input id="all-expenses" type="text"><br>
+        <p id="accural-accounting"></p>
+      </div>
+      <!-- Amount of Rent Increase or Rent Increase(Average Effective Rent for Renewal - Average Effective Rent on Previous Lease) -->
+      <div id="rent-increase">
+        <h4>Rent Increase</h4>
+        Average Effective Rent for Renewal<input id="average-effective-rent-for-renewal" type="text"><br>
+        Average Effective Rent on Previous Lease<input id="average-effective-rent-on-previous-lease" type="text"><br>
+        <p id="rent-increase"></p>
+      </div>
+      <!-- Annualization(Average of actual months of expenses (or income) / number of months reported x 12) -->
+      <div id="annualization">
+        <h4>Annualization</h4>
+        Average of actual months of expenses<input id="average-of-actual-months-of-expenses" type="text"><br>
+        Average of actual months of income<input id="average-of-actual-months-of-income" type="text"><br>
+        Number of months reported<input id="number-of-months-reported" type="text"><br>
+        <p id="annualization"></p>
+      </div>
+      <!-- Average Effective Rent(Total Rent Revenue / Units Occupied) -->
+      <div id="average-effective-rent">
+        <h4>Average Effective Rent</h4>
+          Total Rent Revenue<input id="total-rent-revenue" type="text"><br>
+          Units Occupied<input id="units-occupied" type="text"><br>
+          <p id="average-effective-rent"></p>
+      </div>
+      <!-- Bad Debt(Total Uncollected rent income due to non-payment) -->
+      <div id="bad-debt">
+        <h4>Bad Debt</h4>
+          Total Uncollected Rent Income due to non-payment<input id="total-uncollected" type="text"><br>
+          <p id="bad-debt"></p>
+      </div>
+      <!-- Breakeven Occupany Ratio (Operating Expense + Debt Service + Replacement Reserve) -->
+      <div id="breakeven-occupancy-ratio">
+        <h4>Breakeven Occupancy Ratio</h4>
+          Operating Expense<input id="operating-expense" type="text"><br>
+          Debt Service<input id="debt-service" type="text"><br>
+          Replacement Reserve<input id="replacement-reserve" type="text"><br>
+          <p id="breakeven-occupancy-ratio"></p>
+      </div>
+      <!-- Breakeven Rent Per Square Foot((Operating Expenses + Debt Service + Replacement Reserve)/ Total Property Square Feet) -->
+      <div id="breakeven-rent-per-square-foot">
+        <h4>Breakeven Rent Per Square Foot</h4>
+          Operating Expenses<input id="operating-expense" type="text"><br>
+          Debt Service<input id="debt-service" type="text"><br>
+          Replacement Reserve<input id="replacement-reserve" type="text"><br>
+          Total Property Square Feet<input id="total-property-square-feet" type="text"><br>
+          <p id="breakeven-rent-per-square-foot"></p>
+      </div>
+      <!-- Capital Expense(Large Improvements) -->
+      <div id="capital-expense">
+        <h4>Capital Expense</h4>
+          Capital Expense<input id="capital-expense" type="text"><br>
+          <p id="capital-expense"></p>
+      </div>
+      <!-- Capitalization Rate or Cap Rate (Net Operting Income / Purchase Price) -->
+      <div id="cap-rate">
+        <h4>Capitalization Rate</h4>
+          Net Operating Income<input id="net-operating-income" type="text"><br>
+          Purchase Price<input id="purchase-price" type="text"><br>
+          <p id="capitalization-rate"></p>
+      </div>
+      <!-- Cash Flow (Net Operating Income - Debt Service - Capital Expense - Replacement Reserve) -->
+      <div id="cash-flow">
+        <h4>Cash Flow</h4>
+          Net Operating Income<input id="net-operating-income" type="text"><br>
+          Debt Service<input id="debt-service" type="text"><br>
+          Capital Expense<input id="capital-expense" type="text"><br>
+          Replacement Reserve<input id="replacement-reserve" type="text"><br>
+          <p id="cash-flow"></p>
+      </div>
+      <!-- Cash on Cash Return (Cash Flow / Down Payment (or initial Equity)) -->
+      <div id="cash-on-cash-return">
+        <h4>Cash On Cash Return</h4>
+          Cash Flow<input id="cash-flow" type="text"><br>
+          Down Payment<input id="down-payment" type="text"><br>
+          <p id="cash-on-cash-return"></p>
+      </div>
+      <!-- Debt Service(Loan/Mortgage payment) -->
+      <div id="debt-service">
+        <h4>Debt Service</h4>
+          Loan Amount<input id="loan-amount" type="text"><br>
+          Mortgage Payment<input id="mortgage-payment" type="text"><br>
+          <p id="mortgage-payment"></p>
+      </div>
+      <!-- Effective Gross Income(Gross Potential Rent - Vacancy = Total Rent Revenue + Operating Income) -->
+      <div id="effective-gross-income">
+        <h4>Effective Gross Income</h4>
+         Gross Potential Rent<input id="gross-potential-rent" type="text"><br>
+         Vacancy<input id="vacancy" type="text"><br>
+         Total Rent Revenue<input id="total-rent-revenue" type="text"><br>
+         Operating Income<input id="operating-income" type="text"><br>
+          <p id="effective-gross-income"></p>
+      </div>
+      <!-- Effective Market Rent ((Monthly Market Rent x # of months in lease - total concessions)/ # of months in lease) -->
+      <div id="effective-market-rent">
+        <h4>Effective Market Rent</h4>
+          Monthly Market Rent<input id="monthly-market-rent" type="text"><br>
+          Number of months in lease<input id="number-of-months-in-lease" type="text"><br>
+          Total Concessions<input id="total-concessions" type="text"><br>
+          <p id="effective-market-rent"></p>
+      </div>
+      <!-- Gross Potential Income(Occupied Units x Average Leased Rent + Vacant Units x Average Market Rent) -->
+      <div id="gross-potential-income">
+        <h4>Gross Potential Income</h4>
+          Occupied Units<input id="occupied-units" type="text"><br>
+          Average Leased Rent<input id="average-leased-rent" type="text"><br>
+          Vacant Unit<input id="vacant-units" type="text"><br>
+          Average Market Rent<input id="average-market-rent"><br>
+          <p id="gross-potential-income"></p>
+      </div>
+      <!-- Gross Potential Rent (Total Units x Average Market Rent) -->
+      <div id="gross-potential-rent">
+        <h4>Gross Potential Rent</h4>
+          Total Units<input id="total-units" type="text"><br>
+          Average Market Rent<input id="average-market-rent" type="text"><br>
+          <p id="gross-potential-rent"></p>
+      </div>
+      <!-- Leased Percentage (Leased Units / Total Units) -->
+      <div id="leased-percentage">
+        <h4>Leased Percentage</h4>
+          Leased Units<input id="leased-units" type="text"><br>
+          Total Units<input id="total-units" type="text"><br>
+          <p id="leased-percentage"></p>
+      </div>
+      <!-- Leased Units (Total Units - Vacant Units - Notices to Vacate + Vacant Units Leased + Notices to Vacate Preleased) -->
+      <div id="leased-units">
+        <h4>Leased Units</h4>
+          Total Units<input id="total-units" type="text"><br>
+          Vacant Units<input id="vacant-units" type="text"><br>
+          Notices to Vacate<input id="notices-to-vacate" type="text"><br>
+          Vacant Units Leased<input id="vacant-units-leased" type="text"><br>
+          Notice to Vacate PreLeased<input id="notice-to-vacate-preleased"><br>
+          <p id="leased-units"></p>
+      </div>
+      <!-- Net Operating Income (Effective Gross Income - Operating Expenses) -->
+      <div id="net-operating-income">
+        <h4>Net Operating Income</h4>
+          Effective Gross Income<input id="effective-gross-income" type="text"><br>
+          Operating Expenses<input id="operating-expenses" type="text"><br>
+          <p id="net-operating-income"></p>
+      </div>
+      <!-- Operating Expense Ratio (Operating Expense / Effective Gross Income) -->
+      <div id="operating-expense-ratio">
+        <h4>Operating Expense Ratio</h4>
+          Operating Expense<input id="operating-expense" type="text"><br>
+          Effective Gross Income<input id="effective-gross-income" type="text"><br>
+          <p id="operating-expense-ratio"></p>
+      </div>
+      <!-- Percent Renewal Increase (Amount of Increase / Previous Lease Rent) -->
+      <div id="percent-renewal-increase">
+        <h4>Percent Renewal Increase</h4>
+          Amount of Increase<input id="amount-of-increase" type="text"><br>
+          Previous Lease Rent<input id="previous-lease-rent" type="text"><br>
+          <p id="percent-renewal-increase"></p>
+      </div>
+      <!-- Replacement Reserve (amount set asided for future expenses and projects) -->
+      <div id="replacement-reserve">
+        <h4>Replacement Reserve</h4>
+          Replacemnet Reserve amount<input id="replacement-reserve" type="text"><br>
+          <p id="replacement-reserve"></p>
+      </div>
+      <!-- Return on Investment (Return / Investment) -->
+      <div id="return-on-investment">
+        <h4>Return On Investment</h4>
+          Return<input id="return" type="text"><br>
+          Investment amount<input id="investment-amount" type="text"><br> 
+          <p id="return-on-investment"></p>
+      </div>
+      <!-- Total Rent Revenue (Gross Potential Rent - Vacancy) -->
+      <div id="total-rent-revenue">
+        <h4>Total Rent Revenue</h4>
+          Gross Potential Rent<input id="gross-potential-rent" type="text"><br>
+          Vacancy<input id="vacancy" type="text"><br>
+          <p id="total-rent-revenue"></p>
+      </div>
+      <!-- Turnover Ratio (Total Number of Move Outs / Total Number of Units) -->
+      <div id="turnover-ratio">
+        <h4>Turnover Ratio</h4>
+          Total Number of Move Outs<input id="total-number-of-move-outs" type="text"><br>
+          <p id="turnover-ratio"></p>
+      </div>
+      <!-- Vacancy/Collection Loss (Vacancy, Collection Loss, Non Revenue Units, and Concessions) -->
+      <div id="loss">
+        <h4>Loss</h4>
+          Loss amount(Vacancy, Collection Loss, Non Revenue Units, and Concessions)<input id="loss-amount" type="text"><br>
+          <p id="loss"></p>
+      </div>
     </form>
     <button id="management-snap">SNAP</button>
     <p>BETA DOC DROPBOX</p>
