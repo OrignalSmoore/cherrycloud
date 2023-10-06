@@ -1,4 +1,5 @@
 
+
 var database = [
 	{
 		username: "cherryclouddemo",
@@ -57,13 +58,13 @@ selectElement.addEventListener('change', function() {
 
 
 /*Leasing*/
-var button = document.getElementById("leasingsnap")
-var form = document.getElementByFormName("New Prospects")[0]
+let button = document.getElementById("#leasing-snap")
+let form = document.getElementByFormName("New Prospects")[0]
 button.addEventListener(function collectLeasingData() {
-    var newProspectsWTD = prompt("How many new prospects were there this past week?");
-    var newProspectsMTD = prompt("How many new prospects were there this past month?");
-    var newProspectsQTD = prompt("How many new prospects were there this past quarter?");
-    var newProspectsYTD = prompt("How many new prospects were there this past year?");
+    let newProspectsWTD = prompt("How many new prospects were there this past week?");
+    let newProspectsMTD = prompt("How many new prospects were there this past month?");
+    let newProspectsQTD = prompt("How many new prospects were there this past quarter?");
+    let newProspectsYTD = prompt("How many new prospects were there this past year?");
     
     alert("WTD: " + newProspectsWTD + "\nMTD: " + newProspectsMTD + "\nQTD: " + newProspectsQTD + "\nYTD: " + newProspectsYTD);
     
@@ -76,10 +77,10 @@ button.addEventListener(function collectLeasingData() {
         console.log(successfulConversion);})
     
 
-    var visitsWTD = prompt("How many visits were there this past week?");
-    var visitsMTD = prompt("How many visits were there this past month?");
-    var visitsQTD = prompt("How many visits were there this past quarter?");
-    var visitsYTD = prompt("How many visits were there this past year?");
+    let visitsWTD = prompt("How many visits were there this past week?");
+    let visitsMTD = prompt("How many visits were there this past month?");
+    let visitsQTD = prompt("How many visits were there this past quarter?");
+    let visitsYTD = prompt("How many visits were there this past year?");
     
     alert("WTD: " + visitsWTD + "\nMTD: " + visitsMTD + "\nQTD: " + visitsQTD + "\nYTD: " + visitsYTD);
 
@@ -88,10 +89,10 @@ button.addEventListener(function collectLeasingData() {
 		console.log(successfulConversion);
 	}
 
-	var netLeasesWTD = prompt("How many leases were there this past week?");
-    var netLeasesMTD = prompt("How many leases were there this past month?");
-    var netLeasesQTD = prompt("How many leases were there this past quarter?");
-    var netLeasesYTD = prompt("How many leases were there this past year?");
+	let netLeasesWTD = prompt("How many leases were there this past week?");
+    let netLeasesMTD = prompt("How many leases were there this past month?");
+    let netLeasesQTD = prompt("How many leases were there this past quarter?");
+    let netLeasesYTD = prompt("How many leases were there this past year?");
     
 	alert("WTD: " + netLeasesWTD + "\nMTD: " + netLeasesMTD + "\nQTD: " + netLeasesQTD + "\nYTD: " netLeasesYTD);
 
@@ -100,10 +101,10 @@ button.addEventListener(function collectLeasingData() {
 		console.log(successfulConversion);
 	}
 
-    var closingRatioWTD = prompt("What was the closing ratio for this week?");
-    var closingRatioMTD = prompt("What was the closing ratio for this month?");
-    var closingRatioQTD = prompt("What was the closing ratio for this past quarter");
-    var closingRatioYTD = prompt("What was the closing ratio for this past year?");
+    let closingRatioWTD = prompt("What was the closing ratio for this week?");
+    let closingRatioMTD = prompt("What was the closing ratio for this month?");
+    let closingRatioQTD = prompt("What was the closing ratio for this past quarter");
+    let closingRatioYTD = prompt("What was the closing ratio for this past year?");
     
 	alert("WTD: " + closingRatioWTD "\nMTD: " + closingRatioMTD + "\nQTD: " + closingRatioQTD + "\nYTD: " closingRatioYTD);
 
@@ -112,10 +113,10 @@ button.addEventListener(function collectLeasingData() {
 		console.log(successfulConversion);
 	}
 
-    var leasedPercentageWTD = prompt("How many leases were executed this week?");
-    var leasedPercentageMTD = prompt("How many leases were executed this month?");
-    var leasedPercentageQTD = prompt("How many leases were executed this quarter?");
-    var leasedPercentageYTD = prompt("How many leases were executed this year?");
+    let leasedPercentageWTD = prompt("How many leases were executed this week?");
+    let leasedPercentageMTD = prompt("How many leases were executed this month?");
+    let leasedPercentageQTD = prompt("How many leases were executed this quarter?");
+    let leasedPercentageYTD = prompt("How many leases were executed this year?");
 
     alert( "WTD: " +leasedPercentageWTD + "\nMTD: " + leasedPercentageMTD + "\nQTD: " leasedPercentageQTD + "\nYTD: " leasedPercentageYTD);
 
@@ -124,10 +125,10 @@ button.addEventListener(function collectLeasingData() {
 	console.log(successfulLeasing);
 	}
 
-    var occupanyPercentageWTD = prompt("What is the occupancy percent for the week?");
-    var occupanyPercentageMTD = prompt("What is the occupancy percent for the month?");
-    var occupanyPercentageQTD = prompt("What is the occupancy percent for the quarter?");
-    var occupanyPercentageYTD = prompt("What is the occupancy percent for the year?");
+    let occupanyPercentageWTD = prompt("What is the occupancy percent for the week?");
+    let occupanyPercentageMTD = prompt("What is the occupancy percent for the month?");
+    let occupanyPercentageQTD = prompt("What is the occupancy percent for the quarter?");
+    let occupanyPercentageYTD = prompt("What is the occupancy percent for the year?");
 
     alert( "WTD: " + occupanyPercentageWTD "\nMTD: " + occupanyPercentageMTD + "\nQTD: " + occupanyPercentageQTD + "\nYTD: " occupanyPercentageYTD);
 
@@ -136,10 +137,10 @@ button.addEventListener(function collectLeasingData() {
 	console.log(fullHouse);
 	}
 
-	var googleScoreWTD = prompt("What is the google score this week?");
-    var googleScoreMTD = prompt("What is the point increase or decrease this month?");
-    var googleScoreQTD = prompt("What is the point increase or decrease this quarter?");
-    var googleScoreYTD = prompt("What is the point increase or decrease this year?");
+	let googleScoreWTD = prompt("What is the google score this week?");
+    let googleScoreMTD = prompt("What is the point increase or decrease this month?");
+    let googleScoreQTD = prompt("What is the point increase or decrease this quarter?");
+    let googleScoreYTD = prompt("What is the point increase or decrease this year?");
    
 	alert("WTD: " + googleScoreWTD "\nMTD: " + googleScoreMTD + "\nQTD: " googleScoreQTD + "\nYTD: " googleScoreYTD);
 
@@ -174,43 +175,43 @@ button.addEventListener(function collectLeasingData() {
 
 
 /*Renewals*/
-var button = document.getElementById("renewalssnap");
+var button = document.getElementById("#renewals-snap");
 
-    var totalLeasesExpiring = prompt("What are the total number of leases expiring?");
+    let totalLeasesExpiring = prompt("What are the total number of leases expiring?");
 
-	var leasesExpiringRenewed = prompt("What are the total number of leases expiring that have renewed(new leases executed but not in effect)?"/*This can be percentage or actual number*/);
+	let leasesExpiringRenewed = prompt("What are the total number of leases expiring that have renewed(new leases executed but not in effect)?"/*This can be percentage or actual number*/);
 
-	var leasesExpiringWillRenew = prompt("How many leases are expiring that will be renewed?");
+	let leasesExpiringWillRenew = prompt("How many leases are expiring that will be renewed?");
 
-	var leasesExpiringNTV = prompt("How many leases are expiring that we have recieved NTV's for?");
+	let leasesExpiringNTV = prompt("How many leases are expiring that we have recieved NTV's for?");
 
-	var leasesExpiringGoingMTM = prompt("How many of the leases expiring are going Month-to-Month?");
+	let leasesExpiringGoingMTM = prompt("How many of the leases expiring are going Month-to-Month?");
 
-	var leasesExpiringNoResponse = prompt("How many of the leases expiring have not given their response to renew?");
+	let leasesExpiringNoResponse = prompt("How many of the leases expiring have not given their response to renew?");
 
-	var totalMTM = prompt("How many of the total leases are going Month-to-Month?");
+	let totalMTM = prompt("How many of the total leases are going Month-to-Month?");
 
-	var mtmDueToEvictionProceeding = prompt("How many of those units that are MTM are due for evication(can not renew because of balance due)?");
+	let mtmDueToEvictionProceeding = prompt("How many of those units that are MTM are due for evication(can not renew because of balance due)?");
 
-	var willStayMTM = prompt("How many units will continue as mtm(out of the units currently MTM how many have renewed, vacated, or evicted)?)");
+	let willStayMTM = prompt("How many units will continue as mtm(out of the units currently MTM how many have renewed, vacated, or evicted)?)");
 
-	var ntv = prompt("How many units are on notice to vacate?");
+	let ntv = prompt("How many units are on notice to vacate?");
 
-	var willRenew = prompt("How many units will renew? Units that have given intention to renew but now executed lease");
+	let willRenew = prompt("How many units will renew? Units that have given intention to renew but now executed lease");
 
 /*Delinquency*/
-var button = document.getElementById("delinquencysnap");
+var button = document.getElementById("#delinquency-snap");
 
-    var totalResidentsDelinquent ($1,000 +) 30 days = prompt("How many residents are deliquent in the past 30days with a balance of $1,000 or greater?");
-	if (totalResidentsDelinquent === $1000 + '30 days' || "Balance owed") {
+    let totalResidentsDelinquent (1,000 +) 30 days = prompt("How many residents are deliquent in the past 30days with a balance of $1,000 or greater?");
+	if (totalResidentsDelinquent === 1000 + '30 days' || "Balance owed") {
 		alert("submit intent to file");
-	} else if (totalResidentsDelinquent === $1000 && "acount in grace period") {
+	} else if (totalResidentsDelinquent === 1000 && "acount in grace period") {
 		alert("send reminder balance is due and late fees are to begin accruing");
-	} else (!( totalResidentsDelinquent === $1000)){
+	} else (!( totalResidentsDelinquent === 1000)){
 		alert("monitor account");
 	}
 
-	var totalResidentsDelinquent ($1,000 +) 60 days = prompt("How many residents are deliquent in the past 60days with a balance of $1,000 or greater?");
+	let totalResidentsDelinquent ($1,000 +) 60 days = prompt("How many residents are deliquent in the past 60days with a balance of $1,000 or greater?");
 	if (totalResidentsDelinquent === $1000 + '60 days' || "Balance owed") {
 		alert("submit intent to file");
 	} else if (totalResidentsDelinquent === $1000 && "intent has been filed") {
@@ -219,7 +220,7 @@ var button = document.getElementById("delinquencysnap");
 		alert("confirm evicition with local authority");
 	}
 
-	var totalResidentsDelinquent ($1,000 +) 90 days = prompt("How many residents are deliquent in the past 90days with a balance of $1,000 or greater?");
+	let totalResidentsDelinquent ($1,000 +) 90 days = prompt("How many residents are deliquent in the past 90days with a balance of $1,000 or greater?");
 	if (totalResidentsDelinquent === $1000 + '90 days' || "Balance owed") {
 		alert("submit intent to file");
 	} else if (totalResidentsDelinquent === $1000 && "evicition has been scheduled") {
@@ -228,12 +229,12 @@ var button = document.getElementById("delinquencysnap");
 		alert("check on recent balance for any additional payments made after the fact prior to evicition date & time");
 	}
 
-	var statusOnResidentsIn90Column = prompt("Residents that have been deliquent for 90 days or carry a balance?");
+	let statusOnResidentsIn90Column = prompt("Residents that have been deliquent for 90 days or carry a balance?");
 	if (statusOnResidentsIn90Column === 'balance owed' && 'have not been evicited') {
 		alert("request summary judgement");
 	}	else ("file for eviction")
 
-	var oweAtLeast ($500 +) in 90+ Column = prompt("How many of the residents that have had a balance for 90days or more have a balance of $500 plus?");
+	let oweAtLeast ($500 +) in 90+ Column = prompt("How many of the residents that have had a balance for 90days or more have a balance of $500 plus?");
 	if (oweAtLeast =< $500){
 		alert("monitor");
 	} else if (oweAtLeast >= $500){
@@ -243,11 +244,11 @@ var button = document.getElementById("delinquencysnap");
 	}
 
 /*Maintence*/
-var button = document.getElementById("maintencesnap");
+var button = document.getElementById("#maintence-snap");
 
-    var openFromPriorPeriodWTD = prompt("How many maintenance tickets are still open from prior week?");
-    var openFromPriorPeriodMTD = prompt("How many maintenance tickets are still open from prior month?");
-    var openFromPriorPeriodOverdue = prompt("How many maintenance tickets are still open for month than a month?");
+    let openFromPriorPeriodWTD = prompt("How many maintenance tickets are still open from prior week?");
+    let openFromPriorPeriodMTD = prompt("How many maintenance tickets are still open from prior month?");
+    let openFromPriorPeriodOverdue = prompt("How many maintenance tickets are still open for month than a month?");
     alert("WTD: " + openFromPriorPeriodWTD + "\nMTD: " + openFromPriorPeriodMTD + "\nOverdue: " + openFromPriorPeriodOverdue);
 	if (openFromPriorPeriod <= 10) {
 		openFromPriorPeriod = true;
@@ -255,29 +256,29 @@ var button = document.getElementById("maintencesnap");
 	}
 
 
-	var requestsRecievedWTD = prompt("How many maintenance requests have been recieved this past week?");
-    var requestsRecievedMTD = prompt("How many maintenance requests have been recieved this past month?");
-    var requestsRecievedQTD = prompt("How many maintenance requests have been received this past quarter?");
-    var requestsRecievedYTD = prompt("How many maintenance requests have been recieved this past year?");
+	let requestsRecievedWTD = prompt("How many maintenance requests have been recieved this past week?");
+    let requestsRecievedMTD = prompt("How many maintenance requests have been recieved this past month?");
+    let requestsRecievedQTD = prompt("How many maintenance requests have been received this past quarter?");
+    let requestsRecievedYTD = prompt("How many maintenance requests have been recieved this past year?");
     alert("WTD: " + requestsRecievedWTD + "\nMTD: " + requestsRecievedMTD + "\nQTD: " requestsRecievedQTD + "\nYTD: " requestsRecievedYTD);
 	if (requestsRecieved <= 10) {
 		requestRecieved = true;
 		console.log(OnTrack);
 	}
 
-	var requestsCompletedWTD = prompt("How many maintenance requests have been completed this past week?");
-    var requestsCompletedMTD = prompt("How many maintenance requests have been completed this past month?");
-    var requestsCompletedQTD = prompt("How many maintenance requests have been completed this past quarter?");
-    var requestsCompletedYTD = prompt("How many maintenance requests have been completed this past year?");
+	let requestsCompletedWTD = prompt("How many maintenance requests have been completed this past week?");
+    let requestsCompletedMTD = prompt("How many maintenance requests have been completed this past month?");
+    let requestsCompletedQTD = prompt("How many maintenance requests have been completed this past quarter?");
+    let requestsCompletedYTD = prompt("How many maintenance requests have been completed this past year?");
     alert("WTD: " + requestsCompletedWTD + "\nMTD: " requestsCompletedMTD + "\nQTD: " + requestsCompletedQTD + "\nYTD: " requestsCompletedYTD);
 	if (requestsCompleted >= requestsRecieved) {
 		requestsCompleted = true;
 		console.log(OnTrack)
 	}
 
-	var requestsOpenAtEndOfPeriodWTD = prompt("How many requests recieved are still open at the end of the week?");
-    var requestsOpenAtEndOfPeriodMTD = prompt("How many requests recieved are still open at the end of the month?");
-    var requestsOpenAtEndOfPeriodOverdue = prompt("How many requests recieved are still open that are now overdue?");	    
+	let requestsOpenAtEndOfPeriodWTD = prompt("How many requests recieved are still open at the end of the week?");
+    let requestsOpenAtEndOfPeriodMTD = prompt("How many requests recieved are still open at the end of the month?");
+    let requestsOpenAtEndOfPeriodOverdue = prompt("How many requests recieved are still open that are now overdue?");	    
 	alert("WTD: " + requestsOpenAtEndOfPeriodWTD + "MTD: " + requestsOpenAtEndOfPeriodMTD + "\nOverdue: " requestsOpenAtEndOfPeriodOverdue);
 	if (requestsOpenAtEndOfPeriod >= requestsRecieved) {
 		requestsOpenAtEndOfPeriod = true;
@@ -286,13 +287,16 @@ var button = document.getElementById("maintencesnap");
 
 
 /*Management*/
-var button = document.getElementById("managementsnap");
+var button = document.getElementById("#management-snap");
 
     /*const accuralAccounting(All income - all expenses);*/
-	let allIncome = allIncome;
-	let allExpenses = allExpenses;
-	let accuralAccounting = allIncome - allExpenses;
-	console.log(accuralAccounting);
+	function calculateAccuralValue("accural-accounting"){
+		console.log("calculate")
+		// allIncomeValue = allIncome.value;
+		// allExpensesValue = allExpenses.value;
+		}
+	// managementButton.onclick = calculateAccuralValue;
+	managementButton.addEventListener("click", calculateAccuralValue);
 
 	/*const amountOfRentIncrease(Average Effective Rent for Renewal - Average Effective Rent on Previous Lease);*/
 	let averageEffectiveRentForRenewal = averageEffectiveRentForRenewal;
@@ -456,7 +460,7 @@ var button = document.getElementById("managementsnap");
 	console.log(collectionLoss);
 
 /*Aquisitions*/
-var button = document.getElementById("aquisitionssnap");
+var button = document.getElementById("#aquisitions-snap");
 
     /*const interestForLoan (Interest= Principal x Rate x Time);*/
 	let principal = principal;
