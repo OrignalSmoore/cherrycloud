@@ -4,6 +4,8 @@
 <html>
   <head>
       <title>Cherry Cloud</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="CherryCloudv1CSS.css">
     </head>
       <img src="Cherry Cloud Logo.png" width="100" height="100">
@@ -35,7 +37,7 @@
            <li><strong>Corporate Leasing, Small Businesses and Loans/Note Investing...Coming soon!</strong></li>
         </ul>
     <p><strong>SNAP SHOT SELECTOR (ctrl/cmd select for multiple)</strong>
-        <select multiple size="6">
+        <select id="multiSelector" size="6">
             <option value="Leasing">Leasing</option>
             <option value="Renewals">Renewals</option>
             <option value="Delinquency">Delinquency</option>
@@ -46,7 +48,7 @@
     </p>
       <br>
 <div class="container">
-    <div class="Leasing" id="Leasing"><h3>Leasing</h3>
+    <div class="hidden-item" id="Leasing"><h3>Leasing</h3>
         <form>
          New prospects:<input type="text" required=""><br>
          Visits:<input type="text"><br>
@@ -67,7 +69,7 @@
         <p>BETA DOC DROPBOX</p>
     </div>
 <br>
-    <div class="Renewals" id="Renewals"><h3>Renewals</h3>
+    <div class="hidden-item" id="Renewals"><h3>Renewals</h3>
     <form>
       Total Leases Expiring:<input type="text"><br>
       Leases Expiring Renewed:<input type="text"><br>
@@ -85,7 +87,7 @@
     <p>BETA DOC DROPBOX</p>
     </div>
 <br>
-    <div class="Delinquency" id="Delinquency"><h3>Delinquency</h3>
+    <div class="hidden-item" id="Delinquency"><h3>Delinquency</h3>
     <form>
       Total Residents Delinquent ($1,000 +) 30 days:<input type="text"><br>
       <input type="checkbox" name="Less than 5 Residents">Less than 10 Residents
@@ -103,7 +105,7 @@
     <p>BETA DOC DROPBOX</p>
   </div>
 <br>
-    <div class="Maintenance" id="Maintenance"><h3>Maintenance</h3>
+    <div class="hidden-item" id="Maintenance"><h3>Maintenance</h3>
     <form>
       Open From Prior Period:<input type="text"><br>
       Requests Recieved For Current Period:<input type="text"><br>
@@ -118,7 +120,7 @@
     <p>BETA DOC DROPBOX</p>
   </div>
   <br>
-    <div class="Management" id="Management"><h3>Management</h3>
+    <div class="hidden-item" id="Management"><h3>Management</h3>
     <form>
       <!-- Accural Accounting(All income - all expenses) -->
       <div id="accural-accounting">
@@ -316,32 +318,171 @@
     <p>BETA DOC DROPBOX</p>
   </div>
   <br>
-  <div class="Aquisitions" id="Aquisitions"><h3>Aquisitions</h3>
+  <div class="hidden-item" id="Aquisitions"><h3>Aquisitions</h3>
     <form>
-     Interest for loan (Interest= Principal x Rate x Time) :<input type="text"><br>
-     Principal on loan ([Principal = Interest ÷ (% Rate x Time)]):<input type="text"><br>
-     Rate on loan ([Rate = Interest ÷ (Principal x Time)]):<input type="text"><br>
-     Net Operating Income (NOI = Property Value x Cap Rate):<input type="text"><br>
-     Property Value (Property Value = NOI ÷ Cap Rate):<input type="text"><br>
-     Cap Rate (Cap Rate = NOI ÷ Property Value):<input type="text"><br>
-     Income(Income = Amount Paid x Rate of Return):<input type="text"><br>
-     Amount Paid (Amount Paid = Income ÷ Rate of Return):<input type="text"><br>
-     Rate of Return (Rate of Return = Income ÷ Amount Paid):<input type="text"><br>
-     Increase in Value (Increase = Purchase Price x Rate of Return):<input type="text"><br>
-     Purchase Price (Purchase Price = Increase ÷ Rate of Return):<input type="text"><br>
-     Rate of Return (Rate = Increase ÷ Purchase Price):<input type="text"><br>
-     Loan-to-Value (LTV= Loan Amount / Sales price or appraised value (whichever is less)):<input type="text"><br>
-     Loan Amount (Sales Price or appraised value(whichever is less)x Loan-to-Value(LTV)):<input type="text"><br>
-     Sales Price or Appraised Price(Loan amount / Loan-to-Value(LTV)):<input type="text"><br>
-     Annual Interest(loan amount(Principal) x annual interest rate):<input type="text"><br>
-     Principal Loan Amount (Annual Interest / Annual Interest Rate):<input type="text"><br>
-     Annual Interest Rate (Annual Interest / Loan Amount(principal)):<input type="text"><br>
-     Amount Paid for Points (Loan amount x Points as Percentage of Loan):<input type="text"><br>
-     Loan Amount(Amount Paid for Points / Points as Percentage of Loan):<input type="text"><br>
-     Points as Percentage of Loan (Amount Paid for Points / Loan Amount):<input type="text"><br>
-     Percentage Rent (Gross sales subject to percentage x % in the lease):<input type="text"><br>
-     Gross Sales Subject to the Percentage (Percentage Rent / % in the lease):<input type="text"><br>
-     Percent (%) in the Lease (Percentage Rent / Gross Sales Suject to the Percentage):<input type="text"><br>
+     <!-- Principal on loan ([Principal = Interest ÷ (% Rate x Time)]) -->
+     <div id="principal-on-loan">
+      <h4>Principal on Loan</h4>
+      Interest<input id="interest" type="text"><br>
+      Rate<input id="rate" type="text"><br>
+      Time<input id="time" type="text"><br>
+      <p id="principal-on-loan"></p>
+     </div>
+     <!-- Rate on loan ([Rate = Interest ÷ (Principal x Time)]) -->
+     <div id="rate-on-loan">
+      <h4>Rate on Loan</h4>
+      Interest<input id="interest" type="text"><br>
+      Principal<input id="principal" type="text"><br>
+      Time<input id="time" type="text"><br>
+      <p id="rate-on-loan"></p>
+     </div>
+     <!-- Net Operating Income (NOI = Property Value x Cap Rate) -->
+     <div id="net-operating-income">
+      <h4>Net Operating Income</h4>
+        Property Value<input id="property-value" type="text"><br>
+        Cap Rate<input id="cap-rate" type="text"><br>
+      <p id="net-operating-income"></p>
+     </div>
+     <!-- Property Value (Property Value = NOI ÷ Cap Rate) -->
+     <div id="property-value">
+      <h4>Property Value</h4>
+        Net Operating Income<input id="net-operating-income" type="text"><br>
+        Cap Rate<input id="cap-rate" type="text"><br>
+      <p id="property-value"></p>
+     </div>
+     <!-- Cap Rate (Cap Rate = NOI ÷ Property Value) -->
+     <div id="cap-rate">
+      <h4>Cap Rate</h4>
+        Net Operating Income<input id="net-operating-income" type="text"><br>
+        Property Value<input id="property-value" type="text"><br>
+      <p id="cap-rate"></p>
+     </div>
+     <!-- Income(Income = Amount Paid x Rate of Return) -->
+     <div id="income">
+      <h4>Income</h4>
+        Amount Paid<input id="amount-paid" type="text"><br>
+        Rate of Return<input id="rate-of-return" type="text"><br>
+      <p id="income"></p>
+     </div>
+     <!-- Amount Paid (Amount Paid = Income ÷ Rate of Return) -->
+     <div id="amount-paid">
+      <h4>Amount Paid</h4>
+        Income<input id="income" type="text"><br>
+        Rate of Return<input id="rate-of-return" type="text"><br>
+      <p id="amount-paid"></p>
+     </div>
+     <!-- Rate of Return (Rate of Return = Income ÷ Amount Paid) -->
+     <div id="rate-of-return">
+      <h4>Rate of Return</h4>
+        Income<input id="income" type="text"><br>
+        Amount Paid<input id="amount-paid" type="text"><br>
+      <p id="rate-of-return"></p>
+     </div>
+     <!-- Increase in Value (Increase = Purchase Price x Rate of Return) -->
+     <div id="increase-in-value">
+      <h4>Increase in Value</h4>
+        Purchase Price<input id="purchase-price" type="text"><br>
+        Rate of Return<input id="rate-of-return" type="text"><br>
+      <p id="increase-in-value"></p>
+     </div>
+     <!-- Purchase Price (Purchase Price = Increase ÷ Rate of Return) -->
+     <div id="purchase-price">
+      <h4>Purchase Price</h4>
+        Increase<input id="increase" type="text"><br>
+        Rate of Return<input id="rate-of-return" type="text"><br>
+      <p id="purchase-price"></p>
+     </div>
+     <!-- Rate of Return (Rate = Increase ÷ Purchase Price) -->
+     <div id="rate-of-return">
+      <h4>Rate of Return</h4>
+        Increase<input id="increase" type="text"><br>
+        Purchase Price<input id="purchase-price" type="text"><br>
+      <p id="rate-of-return"></p>
+     </div>
+     <!-- Loan-to-Value (LTV= Loan Amount / Sales price or appraised value (whichever is less)) -->
+     <div id="loan-to-value">
+      <h4>Loan to Value</h4>
+        Loan Amount<input id="loan-amount" type="text"><br>
+        Sales Price<input id="sales-price" type="text"><br>
+      <p id="loan-to-value"></p>
+     </div>
+     <!-- Loan Amount (Sales Price or appraised value(whichever is less)x Loan-to-Value(LTV)) -->
+     <div id="loan-amount">
+      <h4>Loan Amount</h4>
+        Sales Price<input id="sales-price" type="text"><br>
+        Loan to Value<input id="loan-to-value" type="text"><br>
+      <p id="loan-amount"></p>
+     </div>
+     <!-- Sales Price or Appraised Price(Loan amount / Loan-to-Value(LTV)) -->
+     <div id="sales-price">
+      <h4>Sales Price</h4>
+        Loan Amount<input id="loan-amount" type="text"><br>
+        Loan-to-Value<input id="loan-to-value" type="text"><br>
+      <p id="sales-price"></p>
+     </div>
+     <!-- Annual Interest(loan amount(Principal) x annual interest rate) -->
+     <div id="annual-interest">
+      <h4>Annual Interest</h4>
+        Loan Amount<input id="loan-amount" type="text"><br>
+        Annual Interest Rate<input id="annual-interest-rate" type="text"><br>
+      <p id="annual-interest"></p>
+     </div>
+     <!-- Principal Loan Amount (Annual Interest / Annual Interest Rate) -->
+     <div id="principal-loan-amount">
+      <h4>Principal Loan Amount</h4>
+        Annual Interest<input id="annual-interest" type="text"><br>
+        Annual Interest Rate<input id="annuanl-interest-rate" type="text"><br>
+      <p id="principal-loan-amount"></p>
+     </div>
+     <!-- Annual Interest Rate (Annual Interest / Loan Amount(principal)) -->
+     <div id="annual-interest-rate">
+      <h4>Annual Interest Rate</h4>
+        Annual Interest<input id="annual-interest" type="text"><br>
+        Loan Amount<input id="loan-amount" type="text"><br>
+      <p id="annual-interest-rate"></p>
+     </div>
+     <!-- Amount Paid for Points (Loan amount x Points as Percentage of Loan) -->
+     <div id="amount-paid-for-points">
+      <h4>Amount Paid for Points</h4>
+        Loan Amount<input id="loan-amount" type="text"><br>
+        Points as Percentage of Loan<input id="points-percentage-loan" type="text"><br>      
+        <p id="amount-paid-for-points"></p>
+     </div>
+     <!-- Loan Amount(Amount Paid for Points / Points as Percentage of Loan) -->
+     <div id="loan-amount">
+      <h4>Loan Amount</h4>
+        Amount Paid for Points<input id="amount-paid-for-points" type="text"><br>
+        Points as Percentage of Loan<input id="points-percentage-loan" type="text"><br>
+      <p id="loan-amount"></p>
+     </div>
+     <!-- Points as Percentage of Loan (Amount Paid for Points / Loan Amount) -->
+     <div id="points-percentage-loan">
+      <h4>Points as Percentage of Loan</h4>
+        Amount Paid for points<input id="amount-paid-for-points" type="text"><br>
+        Loan Amount<input id="loan-amount" type="text"><br>
+      <p id="points-percentage-loan"></p>
+     </div>
+     <!-- Percentage Rent (Gross sales subject to percentage x % in the lease) -->
+     <div id="percentage-rent">
+      <h4>Percentage Rent</h4>
+        Gross Sales Subject to Percentage<input id="gross-sales-subject-percentage" type="text"><br>
+        Percent in the Lease<input id="percent-in-lease" type="text"><br>
+      <p id="percentage-rent"></p>
+     </div>
+     <!-- Gross Sales Subject to the Percentage (Percentage Rent / % in the lease) -->
+     <div id="gross-sales-subject-percentage">
+      <h4>Gross Sales Subject to the Percentage</h4>
+        Percentage Rent<input id="percentage-rent" type="text"><br>
+        Percent in the Lease<input id="percent-in-lease" type="text"><br>
+      <p id="gross-sales-subject-percentage"></p>
+     </div>
+     <!-- Percent (%) in the Lease (Percentage Rent / Gross Sales Subject to the Percentage) -->
+     <div id="percent-in-lease">
+      <h4>Percent in the Lease</h4>
+        Percentage Rent<input id="percentage-rent" type="text"><br>
+        Gross Sales Subject to the Percentage<input id="gross-sales-subject-percentage" type="text"><br>
+      <p id="percent-in-lease"></p>
+     </div>
      </form>
       <button id="aquisitions-snap">SNAP</button>
       <p>BETA DOC DROPBOX</p>
@@ -353,9 +494,8 @@
       <footer>
         <strong>Simplfying Asset Decisions to One Page</strong>
       </footer>
-      <!-- <script type="text/javascript" src="CherryCloudv1JS.js"></script> -->
-      <script type="text/javascript" src="Test.js"></script>
-      <!--Start of Tawk.to Script-->
+      <script src="CherryCloudv1JS.js" type="text/javascript"></script>
+            <!--Start of Tawk.to Script-->
 <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
