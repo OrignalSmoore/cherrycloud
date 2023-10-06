@@ -1,3 +1,6 @@
+.hidden-item{
+    display: none;
+}
 .login {
     position: absolute;
     top: 3px;
@@ -72,7 +75,7 @@ img:hover {
 .class{
     border: solid, red;
 }
-.Leasing{
+#Leasing{
 border: 5px solid black;
 display: inline-block;
 font-weight: bold;
@@ -80,7 +83,7 @@ background-color: lightgray;
 padding: 3px;
 margin: 3px;
 }
-.Renewals{
+#Renewals{
 border: 5px solid black;
 display: inline-block;
 font-weight: bold;
@@ -88,7 +91,7 @@ background-color: lightgray;
 padding: 3px;
 margin: 3px;
 }
-.Delinquency{
+#Delinquency{
 border: 5px solid black;
 display: inline-block;
 font-weight: bold;
@@ -96,7 +99,7 @@ background-color: lightgray;
 padding: 3px;
 margin: 3px;
 }
-.Maintenance{
+#Maintenance{
 border: 5px solid black;
 display: inline-block;
 font-weight: bold;
@@ -104,7 +107,7 @@ background-color: lightgray;
 padding: 3px;
 margin: 3px;
 }
-.Management{
+#Management{
 border: 5px solid black;
 display: inline-block;
 font-weight: bold;
@@ -112,7 +115,7 @@ background-color: lightgray;
 padding: 3px;
 margin: 3px;
 }
-.Aquisitions{
+#Aquisitions{
  border: 5px solid black;
  display: inline-block;
  font-weight: bold;
