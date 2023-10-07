@@ -61,16 +61,20 @@ selectElement.addEventListener('change', function() {
 let button = document.getElementById("#leasing-snap")
 let form = document.getElementByFormName("New Prospects")[0]
 button.addEventListener(function collectLeasingData() {
-    let newProspectsWTD = prompt("How many new prospects were there this past week?");
-    let newProspectsMTD = prompt("How many new prospects were there this past month?");
-    let newProspectsQTD = prompt("How many new prospects were there this past quarter?");
-    let newProspectsYTD = prompt("How many new prospects were there this past year?");
+    switch (new-prospects){
+		case: "How many new prospects were there this past week?";
+		console.log("How many new prospects were there this past week?");
+		break;
+    // let newProspectsMTD  prompt("How many new prospects were there this past month?");
+    // let newProspectsQTD  prompt("How many new prospects were there this past quarter?");
+    // let newProspectsYTD  prompt("How many new prospects were there this past year?");
+}
     
-    alert("WTD: " + newProspectsWTD + "\nMTD: " + newProspectsMTD + "\nQTD: " + newProspectsQTD + "\nYTD: " + newProspectsYTD);
+    // alert("WTD: " + newProspectsWTD + "\nMTD: " + newProspectsMTD + "\nQTD: " + newProspectsQTD + "\nYTD: " + newProspectsYTD);
     
-    const firstTour = 'First Tour';
-    let closingRatio = 30; 
-    let successfulConversion = true;}
+    // const firstTour = 'First Tour';
+    // let closingRatio = 30; 
+    // let successfulConversion = true;}
 
     if (closingRatio >= 30) {
         successfulConversion = true; 
